@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "grpclab-api-gateway", "grpclab-api-gateway", "{2357229C-CD28-4624-A560-0039EE6C789C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPCLab.APIGateway", "grpclab-api-gateway\src\GRPCLab.APIGateway.csproj", "{2EB3EF8C-4F28-4303-8878-828FA07D9538}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "grpclab-contact-service", "grpclab-contact-service", "{2BFFF910-FBC7-427F-BBD2-6535F07FD4F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPCLab.ContactService", "grpclab-contact-service\src\GRPCLab.ContactService.csproj", "{D637AEA9-60F3-4D04-9958-FC4FA97CFD1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "grpclab-reverse-proxy", "grpclab-reverse-proxy", "{12BE01A5-FB5A-4022-9027-8C46A6DF2D15}"
+	ProjectSection(SolutionItems) = preProject
+		grpclab-reverse-proxy\Dockerfile = grpclab-reverse-proxy\Dockerfile
+		grpclab-reverse-proxy\nginx.conf = grpclab-reverse-proxy\nginx.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DockerCompose", "DockerCompose", "{68F7640E-3147-4E7B-BA5F-D1F02DA0D12A}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "grpclab-profile-serivce", "grpclab-profile-serivce", "{2F2D3FF3-C011-4543-BB4F-3B253676F481}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPCLab.ProfileService", "grpclab-profile-serivce\src\GRPCLab.ProfileService.csproj", "{FC6DFB6E-4B4E-43CD-9C66-DCC35FB0BA43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EB3EF8C-4F28-4303-8878-828FA07D9538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB3EF8C-4F28-4303-8878-828FA07D9538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB3EF8C-4F28-4303-8878-828FA07D9538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB3EF8C-4F28-4303-8878-828FA07D9538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D637AEA9-60F3-4D04-9958-FC4FA97CFD1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D637AEA9-60F3-4D04-9958-FC4FA97CFD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D637AEA9-60F3-4D04-9958-FC4FA97CFD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D637AEA9-60F3-4D04-9958-FC4FA97CFD1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6DFB6E-4B4E-43CD-9C66-DCC35FB0BA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6DFB6E-4B4E-43CD-9C66-DCC35FB0BA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6DFB6E-4B4E-43CD-9C66-DCC35FB0BA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6DFB6E-4B4E-43CD-9C66-DCC35FB0BA43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EB3EF8C-4F28-4303-8878-828FA07D9538} = {2357229C-CD28-4624-A560-0039EE6C789C}
+		{D637AEA9-60F3-4D04-9958-FC4FA97CFD1F} = {2BFFF910-FBC7-427F-BBD2-6535F07FD4F0}
+		{FC6DFB6E-4B4E-43CD-9C66-DCC35FB0BA43} = {2F2D3FF3-C011-4543-BB4F-3B253676F481}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DDE5E68-9DBB-4C34-B390-C479D65CBF54}
+	EndGlobalSection
+EndGlobal

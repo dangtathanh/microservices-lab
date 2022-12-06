@@ -1,0 +1,62 @@
+version: '3.4'
+
+services:
+
+  grpclab-api-gateway:
+    image: grpclab/api-gateway:${TAG:-latest}
+    build:
+      context: ./grpclab-api-gateway/src
+      dockerfile: Dockerfile
+    ports:
+      - 5000:80
+    depends_on:
+      - grpclab-contact-service
+    networks:
+      - internal
+
+  grpclab-contact-service:
+    image: grpclab/contact-service:${TAG:-latest}
+    build:
+      context: ./grpclab-contact-service/src
+      dockerfile: Dockerfile
+    ports:
+      - 5001:80
+    volumes:
+      - ./shared/certificate/:/certs/
+    networks:
+      - internal  
+
+  grpclab-profile-serivce:
+    image: grpclab/profile-service:${TAG:-latest}
+    build:
+      context: ./grpclab-profile-serivce/src
+      dockerfile: Dockerfile
+    ports:
+      - 50020:80
+      - 50021:443
+    volumes:
+      - ./shared/certificate/:/certs/
+    networks:
+      - internal  
+
+  grpclab-proxy:
+    image: grpclab/reverse-proxy:${TAG:-latest}
+    build: 
+      context: ./grpclab-reverse-proxy
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./grpclab-reverse-proxy/cert/:/etc/cert/
+    links:
+      - grpclab-api-gateway
+    depends_on:
+      - grpclab-api-gateway
+    networks:
+      - internal
+
+networks:
+  internal:
+    external: false
+

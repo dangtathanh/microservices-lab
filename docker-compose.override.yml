@@ -1,0 +1,27 @@
+﻿version: '3.4'
+
+services:
+
+  grpclab-api-gateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - LogMultiline=true
+
+  grpclab-contact-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - LogMultiline=true
+      - CertPath=/certs/certificate.pfx
+      - CertPass=123456
+      - ProfileUrl=https://grpclab-profile-serivce
+
+  grpclab-profile-serivce:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - LogMultiline=true
+      - CertPath=/certs/certificate.pfx
+      - CertPass=123456
+
+  grpclab-proxy:
+    environment:
+      - Updated=1

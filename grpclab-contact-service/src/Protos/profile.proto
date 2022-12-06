@@ -1,0 +1,26 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcProfileClient";
+
+package profile;
+
+// The profile service definition.
+service Profile {
+  // Send request to get profiles
+  rpc GetProfiles (ProfilesRequest) returns (ProfilesResponse);
+}
+
+// The request message containing the user's name.
+message ProfilesRequest {
+  repeated int32 ids = 1;
+}
+
+// The response message containing the greetings.
+message ProfilesResponse {
+  message Result {
+	int32 id = 1;
+	string name = 2;
+  }
+
+  repeated Result results = 1;
+}

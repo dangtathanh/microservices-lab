@@ -1,0 +1,13 @@
+{
+	"GlobalConfiguration": {
+		"RouteIsCaseSensitive": false,
+		"QoSOptions": {
+			"ExceptionsAllowedBeforeBreaking": 1,
+			"DurationOfBreak": 1000,
+			"TimeoutValue": 15000
+		},
+		"RateLimitOptions": {
+			"EnableRateLimiting": false
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "Routes": [
+    {
+      "SwaggerKey": "contact",
+      "DownstreamPathTemplate": "/api/v1/contacts",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/v1/contacts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "grpclab-contact-service",
+          "Port": 80
+        }
+      ]
+    }
+  ]
+}
