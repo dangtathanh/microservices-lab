@@ -1,6 +1,5 @@
 ﻿using GRPCLab.ContactService.Models;
 using GRPCLab.ContactService.Models.V1;
-using GRPCLab.ContactService.Servives;
 using GrpcProfileClient;
 using Microsoft.Extensions.Options;
 
@@ -20,7 +19,7 @@ namespace GRPCLab.ContactService.Servives.V1
         public async Task<BaseGetProfilesResult> GetManyAsync(BaseGetProfilesRequest request)
         {
             var _request = request as GetProfilesRequest;
-            if(_request == null
+            if (_request == null
                 || (_request?.Ids?.Count() ?? 0) == 0)
             {
                 throw new ArgumentException("Param value is null", nameof(GetProfilesRequest));

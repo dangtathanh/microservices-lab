@@ -21,6 +21,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - 5001:80
+    depends_on:
+      - grpclab-rabbitmq
     volumes:
       - ./shared/certificate/:/certs/
     networks:
@@ -34,6 +36,8 @@ services:
     ports:
       - 50020:80
       - 50021:443
+    depends_on:
+      - grpclab-rabbitmq
     volumes:
       - ./shared/certificate/:/certs/
     networks:
@@ -55,6 +59,21 @@ services:
       - grpclab-api-gateway
     networks:
       - internal
+  
+  grpclab-rabbitmq:
+    image: rabbitmq:3.11-management
+    hostname: rabbitmq
+    volumes:
+      - ./shared/rabbitmq:/var/lib/rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=P@ssword1
+    networks:
+      - internal
+
 
 networks:
   internal:

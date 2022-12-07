@@ -1,7 +1,6 @@
 ﻿using Google.Protobuf.Collections;
 using Grpc.Core;
 using GrpcProfile;
-using System.Threading.Tasks;
 
 namespace GRPCLab.ProfileService.Services
 {

@@ -2,10 +2,23 @@
   "Routes": [
     {
       "SwaggerKey": "contact",
-      "DownstreamPathTemplate": "/api/v1/contacts",
+      "DownstreamPathTemplate": "/api/{version}/contacts",
       "DownstreamScheme": "http",
-      "UpstreamPathTemplate": "/api/v1/contacts",
+      "UpstreamPathTemplate": "/api/{version}/contacts",
       "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "grpclab-contact-service",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "SwaggerKey": "contact",
+      "DownstreamPathTemplate": "/api/{version}/contacts/{everything}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/{version}/contacts/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
       "DownstreamHostAndPorts": [
         {
           "Host": "grpclab-contact-service",
