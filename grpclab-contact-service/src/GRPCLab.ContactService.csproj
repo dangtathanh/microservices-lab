@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
     <PackageReference Include="Google.Protobuf" Version="3.21.1" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
     <PackageReference Include="Grpc.Net.Client" Version="2.46.0" />
@@ -16,10 +17,15 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="GRPCLab.EventBus" Version="1.0.0" />
+    <PackageReference Include="GRPCLab.EventBusRabbitMQ" Version="1.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Autofac" Version="6.1.0" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.2.1" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,8 +1,13 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using GRPCLab.ContactService;
 using GRPCLab.ContactService.Infrastructures.Extensions;
-using Microsoft.Extensions.DependencyInjection;
+using GRPCLab.ContactService.Infrastructures.Modules;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(builder => builder.RegisterModule(new ContainerModule()));
 
 // App Configurations
 builder.WebHost.ConfigureAppConfiguration((hostingContext, config) =>
@@ -29,7 +34,8 @@ builder.Services.AddApiVersion();
 builder.Services.AddSwagger();
 
 // Add Services
-builder.Services.AddProfileServices(builder.Configuration);
+builder.Services.AddProfileServices(builder.Configuration)
+                    .RegisterEventBus(builder.Configuration);
 
 // Build the app
 var app = builder.Build();
