@@ -9,14 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
     <PackageReference Include="GRPCLab.EventBus" Version="1.0.0" />
-    <PackageReference Include="GRPCLab.EventBusRabbitMQ" Version="1.0.1" />
+    <PackageReference Include="GRPCLab.EventBusRabbitMQ" Version="1.0.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
-    <PackageReference Include="Autofac" Version="6.1.0" />
-    <PackageReference Include="Polly" Version="7.2.1" />
-    <PackageReference Include="RabbitMQ.Client" Version="6.2.1" />
   </ItemGroup>
 
   <ItemGroup>
