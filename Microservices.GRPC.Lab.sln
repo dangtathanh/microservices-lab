@@ -38,6 +38,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPCLab.EventBus", "Buildin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPCLab.EventBusRabbitMQ", "BuildingBlocks\EventBus\EventBusRabbitMQ\GRPCLab.EventBusRabbitMQ.csproj", "{3E06B917-9D2A-4C84-AC6F-597263013183}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "grpclab-identity-service", "grpclab-identity-service", "{CC9A85B8-7461-4A07-BB99-6755826EA0B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRPCLab.IdentityService", "grpclab-identity-service\src\GRPCLab.IdentityService\GRPCLab.IdentityService.csproj", "{BACDDB15-E219-492F-84CD-50F34FEE36EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +68,10 @@ Global
 		{3E06B917-9D2A-4C84-AC6F-597263013183}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E06B917-9D2A-4C84-AC6F-597263013183}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E06B917-9D2A-4C84-AC6F-597263013183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACDDB15-E219-492F-84CD-50F34FEE36EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACDDB15-E219-492F-84CD-50F34FEE36EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACDDB15-E219-492F-84CD-50F34FEE36EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACDDB15-E219-492F-84CD-50F34FEE36EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +83,7 @@ Global
 		{0532F8C1-246C-4C37-A3E4-984BCAC6EE0C} = {2EA14A3E-BBAF-4B40-B568-55D95B21F661}
 		{9B9BA009-0319-486D-A52C-2FB52187160D} = {0532F8C1-246C-4C37-A3E4-984BCAC6EE0C}
 		{3E06B917-9D2A-4C84-AC6F-597263013183} = {0532F8C1-246C-4C37-A3E4-984BCAC6EE0C}
+		{BACDDB15-E219-492F-84CD-50F34FEE36EB} = {CC9A85B8-7461-4A07-BB99-6755826EA0B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6DDE5E68-9DBB-4C34-B390-C479D65CBF54}
