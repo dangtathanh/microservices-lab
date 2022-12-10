@@ -7,10 +7,20 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - LogMultiline=true
 
-  grpclab-contact-service:
+  grpclab-identity-service:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - LogMultiline=true
+      - CertPath=/certs/certificate.pfx
+      - CertPass=123456
+      - EventBusConnection=rabbitmq
+      - EventBusUserName=user
+      - EventBusPassword=P@ssword1
+      - SubscriptionClientName=Identity
+
+  grpclab-contact-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
       - CertPath=/certs/certificate.pfx
       - CertPass=123456
       - ProfileUrl=https://grpclab-profile-serivce
@@ -22,7 +32,6 @@ services:
   grpclab-profile-serivce:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - LogMultiline=true
       - CertPath=/certs/certificate.pfx
       - CertPass=123456
       - EventBusConnection=rabbitmq
