@@ -4,6 +4,7 @@ namespace GRPCLab.IdentityService
 
     {
         public string ApiClientSecrect { get; set; }
+        public string CertPass { get; set; }
         public string IdentityConnectionString { get; set; }
         public string AuthConnectionString { get; set; }
     }
