@@ -1,9 +1,8 @@
 using GRPCLab.IdentityService.Infrastructures.Extensions;
 using IdentityServer4.EntityFramework.DbContexts;
-using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using GRPCLab.IdentityService.Data;
 
 namespace GRPCLab.IdentityService
 {
@@ -15,6 +14,7 @@ namespace GRPCLab.IdentityService
                 .Build()
                 .MigrateDbContext<PersistedGrantDbContext>((_, __) => { })
                 .MigrateDbContext<ConfigurationDbContext>((_, __) => { })
+                .MigrateDbContext<ApplicationDbContext>((_, __) => { })
                 .Run();
         }
 

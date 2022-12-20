@@ -7,8 +7,6 @@ services:
     build:
       context: ./grpclab-api-gateway/src
       dockerfile: Dockerfile
-    ports:
-      - 5000:80
     depends_on:
       - grpclab-contact-service
     networks:
@@ -19,12 +17,10 @@ services:
     build:
       context: ./grpclab-identity-service/src
       dockerfile: Dockerfile
-    ports:
-      - 5001:80
     depends_on:
       - grpclab-rabbitmq
     volumes:
-      - ./shared/certificate/:/certs/
+      - ./shared/certificate/:/app/certs:ro
     networks:
       - internal  
 
@@ -34,7 +30,7 @@ services:
       context: ./grpclab-contact-service/src
       dockerfile: Dockerfile
     ports:
-      - 5001:80
+      - 5002:80
     depends_on:
       - grpclab-rabbitmq
     volumes:
