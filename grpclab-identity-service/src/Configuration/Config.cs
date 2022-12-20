@@ -1,6 +1,5 @@
 ﻿using IdentityServer4;
 using IdentityServer4.Models;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 

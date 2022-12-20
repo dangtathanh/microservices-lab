@@ -11,7 +11,11 @@
           "Host": "grpclab-contact-service",
           "Port": 80
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "contact" ]
+      }
     },
     {
       "SwaggerKey": "contact",
@@ -24,7 +28,11 @@
           "Host": "grpclab-contact-service",
           "Port": 80
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "contact" ]
+      }
     }
   ]
 }

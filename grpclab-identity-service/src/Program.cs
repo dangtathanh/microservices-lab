@@ -1,8 +1,8 @@
+using GRPCLab.IdentityService.Data;
 using GRPCLab.IdentityService.Infrastructures.Extensions;
 using IdentityServer4.EntityFramework.DbContexts;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using GRPCLab.IdentityService.Data;
 
 namespace GRPCLab.IdentityService
 {

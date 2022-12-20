@@ -1,12 +1,12 @@
-﻿using GRPCLab.IdentityService.Models;
+﻿using GRPCLab.IdentityService.Infrastructures.Constants;
+using GRPCLab.IdentityService.Models;
 using IdentityModel;
 using IdentityServer4.Models;
 using IdentityServer4.Validation;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using GRPCLab.IdentityService.Infrastructures.Constants;
 
 namespace GRPCLab.IdentityService.Infrastructures.Validation
 {
