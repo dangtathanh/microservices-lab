@@ -1,3 +1,4 @@
+using Microsoft.IdentityModel.Tokens;
 using MMLib.SwaggerForOcelot.DependencyInjection;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
@@ -42,6 +43,21 @@ builder.Services.AddSwaggerForOcelot(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
+
+
+var identityUrl = builder.Configuration["IdentityUrl"];
+var authenticationProviderKey = builder.Configuration["AuthKey"];
+builder.Services.AddAuthentication()
+                .AddJwtBearer(authenticationProviderKey, x =>
+                {
+                    x.Authority = identityUrl;
+                    x.RequireHttpsMetadata = false;
+                    x.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidAudiences = new[] { "profile", "contact", "message" },
+                        ValidateIssuer = false // TO-DO: Need to config to validate Issuer
+                    };
+                });
 
 // App Run
 var app = builder.Build();

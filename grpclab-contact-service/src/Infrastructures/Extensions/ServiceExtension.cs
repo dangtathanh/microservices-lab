@@ -1,12 +1,12 @@
 ﻿using Autofac;
-using GRPCLab.ContactService.Servives;
-using GrpcProfileClient;
 using GRPCLab.BuildingBlocks.EventBus;
 using GRPCLab.BuildingBlocks.EventBus.Abstractions;
 using GRPCLab.BuildingBlocks.EventBusRabbitMQ;
-using System.Security.Cryptography.X509Certificates;
-using RabbitMQ.Client;
 using GRPCLab.ContactService.IntegrationEvents.EventHandling;
+using GRPCLab.ContactService.Servives;
+using GrpcProfileClient;
+using RabbitMQ.Client;
+using System.Security.Cryptography.X509Certificates;
 
 namespace GRPCLab.ContactService.Infrastructures.Extensions
 {

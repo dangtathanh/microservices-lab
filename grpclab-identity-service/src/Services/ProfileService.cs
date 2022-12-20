@@ -1,15 +1,15 @@
 ﻿using GRPCLab.IdentityService.Models;
+using IdentityModel;
 using IdentityServer4.Models;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using System.Security.Claims;
 using System;
-using System.Threading.Tasks;
-using System.Linq;
-using IdentityModel;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace GRPCLab.IdentityService.Services
 {

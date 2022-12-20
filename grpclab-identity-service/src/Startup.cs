@@ -1,9 +1,13 @@
 using GRPCLab.IdentityService.Configuration;
 using GRPCLab.IdentityService.Data;
+using GRPCLab.IdentityService.Infrastructures.Validation;
 using GRPCLab.IdentityService.Models;
+using GRPCLab.IdentityService.Services;
+using IdentityServer4.AccessTokenValidation;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
 using IdentityServer4.EntityFramework.Stores;
+using IdentityServer4.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -12,14 +16,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using System.Data;
 using System;
 using System.Linq;
 using System.Reflection;
-using IdentityServer4.Services;
-using GRPCLab.IdentityService.Services;
-using GRPCLab.IdentityService.Infrastructures.Validation;
-using IdentityServer4.AccessTokenValidation;
 
 namespace GRPCLab.IdentityService
 {

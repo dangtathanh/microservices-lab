@@ -6,6 +6,8 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - LogMultiline=true
+      - IdentityUrl=http://grpclab-identity-service
+      - AuthKey=Bearer
 
   grpclab-identity-service:
     environment:
